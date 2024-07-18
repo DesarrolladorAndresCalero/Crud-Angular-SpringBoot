@@ -1,0 +1,51 @@
+.formularioRegistro{
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 6%;
+  padding: 1%;
+  background-color: rgb(103, 0, 103);
+  box-shadow: 1px 2px 10px;
+  border-radius: 10px;
+}
+
+.form-group{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.form-control{
+  box-shadow: 1px 2px black;
+  background-color: rgb(162, 0, 162);
+  border: none;
+  color: white;
+}
+
+.titulo{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.texto{
+  color: white;
+}
+
+.boton{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.btn-guardar{
+  background-color: rgb(162, 0, 162);
+  border: none;
+  box-shadow: 0px 0px 3px black;
+}
+
+
+
+
+
+
