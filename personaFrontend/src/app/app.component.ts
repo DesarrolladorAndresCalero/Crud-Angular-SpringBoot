@@ -60,7 +60,6 @@ export class AppComponent implements OnInit {
   guardar() {
     this.personaService.savePersona(this.personaForm.value).subscribe(resp => {
       this.estado = resp;
-      console.log(resp)
     },
       error => (console.error(error))
     )
