@@ -19,6 +19,7 @@ import com.persona.service.PersonaService;
 @RestController
 @RequestMapping("/persona/")
 public class PersonaRest {
+	
 
 	@Autowired
 	private PersonaService personaService;
@@ -30,8 +31,8 @@ public class PersonaRest {
 
 	@PostMapping
 	private ResponseEntity<Persona> savePersona(@RequestBody Persona persona) {
-		Persona personaGuardada = personaService.save(persona);
 		try {
+			Persona personaGuardada = personaService.save(persona);
 			return ResponseEntity.created(new URI("/persona/" + personaGuardada.getId())).body(personaGuardada);
 		} catch (URISyntaxException e) {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
