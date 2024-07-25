@@ -28,9 +28,39 @@
       </select>
     </div>
     <div class="boton">
-      <button class="btn btn-primary btn-guardar" type="submit">G U A R D A R</button>
+      <button class="btn btn-primary btn-guardar" type="submit" [disabled]="personaForm.invalid">G U A R D A R</button>
     </div>
   </form>
+</div>
+
+
+<div class="tabla">
+  <h2 class="titulo">Personas Registradas</h2>
+  <table class="table responsive">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Pais</th>
+        <th>Estado</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of persona">
+        <td>{{item.id}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.apellido}}</td>
+        <td>{{item.edad}}</td>
+        <td>{{item.pais.nombre}}</td>
+        <td>{{item.estado.nombre}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="eliminar(item)"><i class="bi bi-trash"></i></button></td>
+        <td><button type="button" class="btn btn-success" (click)="editar(item)"><i class="bi bi-pencil-fill"></i></button></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <router-outlet />
